@@ -1,0 +1,349 @@
+
+
+/* this is just a styling that 
+ I got from youtube, although I commented out some lines
+  and altered others */
+
+  .profile-pic-div{
+    height: 200px;
+    width: 230px;
+    position: relative;
+    top: 10%;
+    left: 32%;
+    border: 1px solid rgb(146, 144, 144, 0.65);
+    border-radius: 50%;
+    background: url('default-avatar.png');
+    background-size: 100% 100%;
+    overflow: hidden;
+  }
+  .profile-pic-div2{
+    height: 200px;
+    width: 230px;
+    position: relative;
+    top: 10%;
+    left: 2%;
+    border: 1px solid rgb(146, 144, 144, 0.65);
+    border-radius: 50%;
+    background: url('default-avatar.png');
+    background-size: 100% 100%;
+    overflow: hidden;
+  }
+
+.myfile{
+    position: absolute;
+    bottom: 0;
+    outline: none;
+    color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 90px;
+    cursor: pointer;
+    opacity: 0;
+    background-color: rgb(173, 169, 169, 0.65);
+}
+.myfile::-webkit-file-upload-button{
+    visibility: hidden;
+}
+.myfile::before{
+    content: '';
+    font-family: fontAwesome;
+    font-size: 40px;
+    color: #fff;
+    display: inline-block;
+    user-select: none;
+    -webkit-user-select: none;
+}
+/* .myfile::after{
+    content: 'Update';
+    font-family: 'Ubuntu';
+    color: #fff;
+    font-weight: 400;
+    display: block;
+    top: 55px;
+    position: absolute;
+} */
+.myfile:hover{
+    opacity: 0.7;
+}
+
+
+/* this is for the body of the web page */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu','Montserrat', monospace;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: #ecf0f3;
+    color: #555;
+}
+.main-container{
+    height: 580px;
+    width: 690px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 13px 13px 20px #999,
+                -13px -13px 20px #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.main-container h2{
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 30px;
+    margin: -10px;
+    color: royalblue;
+}
+label.validation-error{
+    color: red;
+    margin-left: 3px;
+}
+/* .hide{
+    display: none;
+} */
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 600;
+}
+ .input-section-main{
+    overflow: hidden;
+}
+
+.site-header, .profile-pic, .bio-data, .education, .hobbies, .profile-display{
+    position: absolute;
+    height: 500px;
+    width: 530px;
+    top: 19%;
+    left: 200%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    transition: all .6s;
+}
+
+.profile-pic{
+    left: 50%;
+    font-size: larger;
+
+}
+
+.profile-pic h1{
+    padding: 10px;
+    align-self: center;
+    margin-top: -30px;
+    font-weight: 800;
+    color: royalblue;
+}
+
+.display-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: larger;
+}
+
+.display-header h1{
+    margin-top: -10%;
+    font-weight: 800;
+    color: royalblue;
+}
+
+.header-btn button{
+    margin-top: 70px;
+    width: 150px;
+    color: rgb(238, 230, 230);
+    font-size: 20px;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color:royalblue;
+    
+}
+
+.details{
+    display: block;
+    justify-content: center;
+    margin: 4px;
+}
+
+.details div{
+    margin-left: 10px;
+    margin: 3px;
+    margin-bottom: -4px;
+}
+
+.details-2, .details-3{
+    margin: 5%;
+}
+
+.details-3{
+    margin-top: 10px;
+    margin-bottom: 10%;
+}
+p > textarea{
+    margin-top: 3%;
+    height: 6em;
+}
+
+#finishBtn{
+    background-color: rgb(40, 199, 146);
+}
+
+#finishBtn:hover{
+    transform: scale(1.05);
+    background-color: rgb(52, 230, 170);
+}
+
+.display-table{
+    border-width: 3px;
+}
+table.list{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+span{
+    font-size: medium;
+}
+td, th{
+    /* border: 1px solid #dddddd; */
+    text-align: left;
+    padding: 6px 2px;
+}
+.one, .three{
+    width: 110px
+}
+.two{
+    width: 20em;
+}
+
+td>input{
+    height: 30px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 0 2px #e2e7ee,
+                0 0 2px #fff,
+                3px 3px 2px #a7aaaf,
+                -4px -4px 9px #ffffff;
+}
+.ref{
+    display: flex;
+    
+}
+h4{
+    margin: 2%;
+}
+input[type=checkbox]{
+    transform: scale(1.25);
+    border: none;
+    outline: none;
+    margin: 1.5%;
+}
+.input, textarea, select{
+    margin-bottom: 10px;
+    width: 400px;
+    font-size: medium;
+    height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    /* background: #ecf0f3; */
+    box-shadow: 0 0 0 2px #e2e7ee,
+                0 0 2px #fff,
+                3px 3px 2px #a7aaaf,
+                -4px -4px 9px #ffffff;
+}
+
+.input1{
+    margin-bottom: 24px;
+    margin-right: 9px;
+    width: 160px;
+    height: 29px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    /* background: #ecf0f3; */
+    box-shadow: 0 0 0 2px #e2e7ee,
+                0 0 2px #fff,
+                3px 3px 2px #a7aaaf,
+                -4px -4px 9px #ffffff;
+}
+
+#stmt, #hobbs{
+    height: 65px !important;
+}
+
+#gender2, #gender3{
+    color: black;
+}
+
+.input::placeholder, textarea::placeholder, select, .input1::placeholder{
+    color: #a7aaaf;
+    font-size: large;
+    padding: 5px;
+}
+
+.button-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#picBtn{
+    display: flex;
+    margin: 20% 10%;
+    
+    align-self: flex-end;
+}
+
+a{
+    text-decoration: none;
+}
+
+.button-div button{
+    width: 150px;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color:royalblue;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(238, 230, 230);
+    cursor: pointer;
+}
+
+.button-div button:hover, .header-btn button:hover{
+    transform: scale(1.05);
+    background-color: rgb(117, 150, 250);
+}
+
+/* .submit ol{
+    padding-left: 22px;
+} */
+
+/*  To be used in the jquery */
+
+.profile-pic.open, .bio-data.open, .education.open, .hobbies.open, .profile-display.open{
+    left: 50%;
+}
+
+.site-header.done, .profile-pic.done,.bio-data.done, .education.done, .hobbies.done{
+    left: -200%;
+}

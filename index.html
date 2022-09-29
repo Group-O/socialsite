@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- embed google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+    <!-- Bootstrap CSS and JQuery  -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.rtl.min.css" integrity="sha3 col-md-3 col-sm-683 col-sm-6-+3 col-sm-6j3 col-md-3 col-sm-60LffJ3 col-sm-6tgIMrq9CwHvn0NjEvmuDCOfk6Rpg2xg7zgOxWWtLtozDEEVvBPgHqE" crossorigin="anonymous"> -->
+    <script src="jquery.3.2.1.min.js" type="text/javascript"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" /> -->
+    <title>Social Media Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+
+        <form name="myform" id="form" method="get" onsubmit="event.preventDefault();" autocomplete="off">
+        <div class="input-section-main">
+      
+            <!-- This is the Profile picture -->
+            <section class="profile-pic" id="profile-pic">
+                <h1>SOCIAL MEDIA SITE</h1>
+                <h2>Profile Image</h2>
+                <div class="profile-pic-div" id="input_field">
+                    <input type="file" class="myfile" id="imgfile" accept="image/png, image/jpg">
+                </div>
+                <div class="button-div" id="picBtn">
+                    <button type="button" id="picNextBtn">Next</button>
+                </div>
+            </section>
+
+            <!-- this is the Personal Statement -->
+
+            <div class="bio-data" id="bio-data">
+                <h2>Personal Statement:</h2>
+                <div class="details">
+                    <div class="fullname">
+                        <label class="validation-error hide" id="fullnameValidationError">*This field is required.</label>
+                        <input placeholder="Full name" class="input" type="text" name="fullname" id="fname" required>
+                    </div>
+                    <div class="gender">
+                        <select name="gender" id="gender">
+                            <option value="gender">Gender</option>
+                            <option id="gender2" value="male">Male</option>
+                            <option id="gender3" value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="dateOfBirth">
+                        <label class="validation-error hide" id="fullnameValidationError">*This field is required.</label>
+                        <input placeholder="Date of Birth" class="input" type="date" name="dateOfBirth" id="DoB" required>
+                    </div>
+                                       
+                    <div class="emailAddress">
+                        <label class="validation-error hide" id="fullnameValidationError">*This field is required.</label>
+                        <input placeholder="Email Address" class="input" type="email" name="emailAddress" id="email" required>
+                    </div>
+                    <div>
+                        
+                        <input placeholder="Statement" class="input" name="statement" id="stmt" cols="20" rows="10">
+                    </div>
+                </div>
+                    
+                <div class="button-div">
+                    <button type="button" id="statementPrevBtn">Prev</button>
+                    <button type="button" id="statementNextBtn">Next</button>
+                </div>
+            </div>
+
+            <!-- This is the Education Section  -->
+            <section class="education" id="education">
+                <h2>Education Qualifications</h2>
+                <div class="details-2">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><h3>Years</h3></th>
+                                <th><h3>Institute</h3></th>
+                                <th><h3>Award</h3></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input id="first" class="one" type="text"></td>
+                                <td><input id="sec" class="two" type="text"></td>
+                                <td><input id="third" class="three" type="text"></td>
+                            </tr>
+                            <tr>
+                                <td><input id="fourth" class="one" type="text"></td>
+                                <td><input id="fifth" class="two" type="text"></td>
+                                <td><input id="sixth" class="three" type="text"></td>
+                            </tr>
+                            <tr>
+                                <td><input id="sev" class="one" type="text"></td>
+                                <td><input id="eighth" class="two" type="text"></td>
+                                <td><input id="ninth" class="three" type="text"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4>References:</h4>
+                    <div>
+                        <p class="ref"><input class="input1" type="text" id="Ref1" placeholder="Full name">
+                        <input class="input1" type="text" id="Ref2" placeholder="Contact">
+                        <input class="input1" type="email" id="Ref3" placeholder="Email Address"></p>
+                        <p class="ref"><input class="input1" type="text" id="Ref4" placeholder="Full name">
+                        <input class="input1" type="text" id="Ref5" placeholder="Contact">
+                        <input class="input1" type="email" id="Ref6" placeholder="Email Address"></p>
+                    </div>
+                    <div class="button-div">
+                        <button type="button" id="educationPrevBtn">Prev</button>
+                        <button type="button" id="educationNextBtn">Next</button>
+                    </div>
+                </div>
+                
+            </section>
+
+            
+            <!-- this is the Hobbies Section -->
+            <section class="hobbies" id="hobbies">
+                <h2>Hobbies</h2>
+                <div class="details-3">
+                    
+                    <p><input placeholder="Hobbies" class="input" id="hobbs" rows="10" cols="40"></p>
+                </div>
+                
+                <div class="button-div">
+                    <button type="button" id="submitPrevBtn">Prev</button>
+                    <button type="submit" id="finishBtn">Finish</button>
+                </div>
+            </section>
+
+
+            
+
+            <div class="profile-display" id="profDisplay">
+                <div class="display-header">
+                    <h1 >Profile Display</h1>
+                </div>
+                <div>
+                    <table id="table" class="display-table">
+                        <tbody>
+                
+                        <tr>
+                            <td rowspan="4"> <img src="" class="profile-pic-div2" id="profPic"/>
+                            </td>
+                            <td><div>Full Name: <span id="fullnamedis"></span></div> 
+                                <div>Gender: <span id="genderDis"></span></div> 
+                                <div>Date of Birth: <span id="DoBdis"></span></div> 
+                                <div>Email Address: <span id="emaildis"></span></div> 
+                                <div>Statement: <span id="statmt"></span></div> 
+                               
+                            </td>
+                        </tr>
+                            <tr>
+                            <td>
+                                <table class="list" border="1">
+                                    <thead>
+                                        <tr>
+                                            <th>Years</th>
+                                            <th>Institute</th>
+                                            <th>Award</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td><span id="educ1"></span></td> <td><span id="educ2"></span></td> <td><span id="educ3"></span></td></tr>
+                                        <tr><td><span id="educ4"></span></td> <td><span id="educ5"></span> <td><span id="educ6"></span></td></td></tr>
+                                        <tr><td><span id="educ7"></span> <td><span id="educ8"></span> <td><span id="educ9"></span></td></td></td>
+                                    </tbody>
+                                   </table>
+                               </td> 
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table class="list" >
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Contact</th>
+                                                <th>Email Address</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody><tr>
+                                            <td><span id="ref1"></span></td> <td><span id="ref2"></span></td> <td><span id="ref3"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span id="ref4"></span></td> <td><span id="ref5"></span></td> <td><span id="ref6"></span></td>
+                                        </tr>                                       
+                                            
+                                        </tbody>
+                                       </table></tr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>Hobbies: <span id="hobbiez"></span></div> 
+                                   
+                                </td>
+                            </tr>
+                            
+                        
+                        </tbody>
+                    </table>
+                                
+                    <div class="button-div">
+                        <a href="index.html" id="edit"><button type="button" onclick="localStorage.clear();">Edit</button></a>
+                    </div>
+                    </form>
+                </div>    
+                
+                
+            </div>
+
+        </div>
+
+
+       
+    </div> 
+    <script>
+        
+        // the jquery code
+        $(document).ready(function(){
+
+           
+            $('#picNextBtn').on('click', function(){
+                $('.profile-pic').addClass('done');
+                $('.bio-data').addClass('open');
+            });
+            // onclick on the previous button of Personal Statement
+            $('#statementPrevBtn').on('click', function(){
+                $('.profile-pic').removeClass('done');
+                $('.bio-data').removeClass('open');
+            });
+             // onclick on the next button of personal statement
+             $('#statementNextBtn').on('click', function(){
+                $('.bio-data').addClass('done');
+                $('.education').addClass('open');
+            });
+            // onclick on the previous button of education
+            $('#educationPrevBtn').on('click', function(){
+                $('.bio-data').removeClass('done');
+                $('.education').removeClass('open');
+            });
+             // onclick on the next button of education
+             $('#educationNextBtn').on('click', function(){
+                $('.education').addClass('done');
+                $('.hobbies').addClass('open');
+            });
+            // onclick on the previous button of hobbies
+            $('#submitPrevBtn').on('click', function(){
+                $('.education').removeClass('done');
+                $('.hobbies').removeClass('open');
+            });
+            // onclick on the submit button 
+            $('#finishBtn').on('click', function(){
+               confirm("Are you certain on the contents entered?")
+                $('.hobbies').addClass('done');
+                $('.profile-display').addClass('open');
+            });
+            
+        });
+
+
+        const inputField = document.querySelector("#imgfile");
+        var uploadedImage = "";
+        inputField.addEventListener("change",function(){
+            const reader = new FileReader();
+            reader.addEventListener("load", ()=>{
+                uploadedImage=reader.result;
+                document.querySelector("#input_field").style.backgroundImage = `url(${uploadedImage})`;
+                localStorage.setItem('wallpaper', reader.result);
+
+            });
+            reader.readAsDataURL(this.files[0]);
+        });
+        document.addEventListener("DOMContentLoaded", ()=>{
+            const imageDataUrl = localStorage.getItem("wallpaper");
+            if (imageDataUrl) {
+                document.querySelector('#profPic').setAttribute("src", imageDataUrl);
+            }
+        });
+                        
+
+        
+    </script>
+     <script src="display.js"></script>
+     <script src="jquery.3.2.1.min.js"></script>
+    
+    
+</body>
+</html>
