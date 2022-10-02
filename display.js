@@ -1,5 +1,3 @@
-
-
 const form = document.getElementById('form');
 const fullnameVar = document.getElementById('fname');
 const genderVar = document.getElementById('gender');
@@ -14,6 +12,10 @@ const hobbiesVar = document.getElementById('hobbs');
 
 
 form.addEventListener('submit', function(){
+    const imageDataUrl = localStorage.getItem("wallpaper");
+    if (imageDataUrl) {
+        document.querySelector('#profPic').setAttribute("src", imageDataUrl);
+    }
    
     localStorage.clear();
     
@@ -56,34 +58,26 @@ form.addEventListener('submit', function(){
         return {fullNameValue, genderValue, dateOfBirthValue, emailValue, statementValue, firstInputValue, secInputValue, thirdInputValue, fourthInputValue, fifthInputValue, sixthInputValue, sevInputValue, eighthInputValue, ninthInputValue, name1Value, contact1Value, email1Value, name2Value, contact2Value, email2Value, hobbiesValue };
     }
     function getItem() {
-        document.getElementById('fullnamedis').textContent = localStorage.getItem('Full name');
-        document.getElementById('genderDis').textContent = localStorage.getItem('Gender');
-        document.getElementById('DoBdis').textContent = localStorage.getItem('Date of Birth');
-        document.getElementById('emaildis').textContent = localStorage.getItem('Email Address');
-        document.getElementById('statmt').textContent = localStorage.getItem('statement');
-        document.getElementById('educ1').textContent = localStorage.getItem('educ1');
-        document.getElementById('educ2').textContent = localStorage.getItem('educ2');
-        document.getElementById('educ3').textContent = localStorage.getItem('educ3');
-        document.getElementById('educ4').textContent = localStorage.getItem('educ4');
-        document.getElementById('educ5').textContent = localStorage.getItem('educ5');
-        document.getElementById('educ6').textContent = localStorage.getItem('educ6');
-        document.getElementById('educ7').textContent = localStorage.getItem('educ7');
-        document.getElementById('educ8').textContent = localStorage.getItem('educ8');
-        document.getElementById('educ9').textContent = localStorage.getItem('educ9');
-        document.getElementById('ref1').textContent = localStorage.getItem('ref1');
-        document.getElementById('ref2').textContent = localStorage.getItem('ref2');
-        document.getElementById('ref3').textContent = localStorage.getItem('ref3');
-        document.getElementById('ref4').textContent = localStorage.getItem('ref4');
-        document.getElementById('ref5').textContent = localStorage.getItem('ref5');
-        document.getElementById('ref6').textContent = localStorage.getItem('ref6');
-        document.getElementById('hobbiez').textContent = localStorage.getItem('Hobbies');
+        document.getElementById('fullnamedis').innerHTML = localStorage.getItem('Full name');
+        document.getElementById('genderDis').innerHTML = localStorage.getItem('Gender');
+        document.getElementById('DoBdis').innerHTML = localStorage.getItem('Date of Birth');
+        document.getElementById('emaildis').innerHTML = localStorage.getItem('Email Address');
+        document.getElementById('statmt').innerHTML = localStorage.getItem('statement');
+        document.getElementById('educ1').innerHTML = localStorage.getItem('educ1');
+        document.getElementById('educ2').innerHTML = localStorage.getItem('educ2');
+        document.getElementById('educ3').innerHTML = localStorage.getItem('educ3');
+        document.getElementById('educ4').innerHTML = localStorage.getItem('educ4');
+        document.getElementById('educ5').innerHTML = localStorage.getItem('educ5');
+        document.getElementById('educ6').innerHTML = localStorage.getItem('educ6');
+        document.getElementById('educ7').innerHTML = localStorage.getItem('educ7');
+        document.getElementById('educ8').innerHTML = localStorage.getItem('educ8');
+        document.getElementById('educ9').innerHTML = localStorage.getItem('educ9');
+        document.getElementById('ref1').innerHTML = localStorage.getItem('ref1');
+        document.getElementById('ref2').innerHTML = localStorage.getItem('ref2');
+        document.getElementById('ref3').innerHTML = localStorage.getItem('ref3');
+        document.getElementById('ref4').innerHTML = localStorage.getItem('ref4');
+        document.getElementById('ref5').innerHTML = localStorage.getItem('ref5');
+        document.getElementById('ref6').innerHTML = localStorage.getItem('ref6');
+        document.getElementById('hobbiez').innerHTML = localStorage.getItem('Hobbies');
     }
 });
-
-
-
-
-// an alternative for localStorage is sessionStorage; lasts for he session, so when the user closes the tab, the data stored is auto deleted
-//  sessionStorage.setItem('myObj', JSON.stringify([fullNameValue, DoBValue]));
-//  /* to extract the data*/
-//  const fullName = sessionStorage.setItem('Full name');
