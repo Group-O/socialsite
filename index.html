@@ -138,11 +138,17 @@
             
 
             <div class="profile-display" id="profDisplay">
-                <div class="display-header">
-                    <h1 >Profile Display</h1>
-                </div>
+                
                 <div>
+                    
                     <table id="table" class="display-table">
+                        <thead>
+                            <th>
+                                <div class="display-header">
+                                    <h1 >Profile</h1>
+                                </div>
+                            </th>
+                        </thead>
                         <tbody>
                 
                         <tr>
@@ -279,12 +285,12 @@
             });
             reader.readAsDataURL(this.files[0]);
         });
-        document.addEventListener("DOMContentLoaded", ()=>{
-            const imageDataUrl = localStorage.getItem("wallpaper");
-            if (imageDataUrl) {
-                document.querySelector('#profPic').setAttribute("src", imageDataUrl);
-            }
-        });
+        // document.addEventListener("load", ()=>{
+        //     const imageDataUrl = localStorage.getItem("wallpaper");
+        //     if (imageDataUrl) {
+        //         document.querySelector('#profPic').setAttribute("src", imageDataUrl);
+        //     }
+        // });
                         
 
         
