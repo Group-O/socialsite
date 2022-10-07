@@ -1,4 +1,6 @@
-  .profile-pic-div{
+
+        /*    the profile picture    */
+.profile-pic-div{
     height: 200px;
     width: 230px;
     position: relative;
@@ -9,8 +11,9 @@
     background: url('default-avatar.png');
     background-size: 100% 100%;
     overflow: hidden;
-  }
-  .profile-pic-div2{
+}
+
+.profile-pic-div2{
     height: 200px;
     width: 230px;
     position: relative;
@@ -21,7 +24,7 @@
     background: url('default-avatar.png');
     background-size: 100% 100%;
     overflow: hidden;
-  }
+}
 
 .myfile{
     position: absolute;
@@ -30,7 +33,7 @@
     color: transparent;
     width: 100%;
     box-sizing: border-box;
-    padding: 11px 90px;
+    padding: 11px 94px;
     cursor: pointer;
     opacity: 0;
     background-color: rgb(173, 169, 169, 0.65);
@@ -47,15 +50,7 @@
     user-select: none;
     -webkit-user-select: none;
 }
-/* .myfile::after{
-    content: 'Update';
-    font-family: 'Ubuntu';
-    color: #fff;
-    font-weight: 400;
-    display: block;
-    top: 55px;
-    position: absolute;
-} */
+
 .myfile:hover{
     opacity: 0.7;
 }
@@ -93,7 +88,7 @@ body{
 
 .main-container h2{
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 2px;
     font-size: 30px;
     margin: -10px;
@@ -103,9 +98,7 @@ label.validation-error{
     color: red;
     margin-left: 3px;
 }
-/* .hide{
-    display: none;
-} */
+
 .nav{
     display: flex;
     flex-direction: row;
@@ -142,7 +135,8 @@ label.validation-error{
     padding: 10px;
     align-self: center;
     margin-top: -30px;
-    font-weight: 800;
+    font-size: 36px;
+    font-weight: 900;
     color: royalblue;
 }
 
@@ -220,7 +214,6 @@ span{
     font-size: 17px;
 }
 td, th{
-    /* border: 1px solid #dddddd; */
     text-align: left;
     padding: 6px 2px;
 }
@@ -261,7 +254,6 @@ input[type=checkbox]{
     border-radius: 4px;
     outline: none;
     border: none;
-    /* background: #ecf0f3; */
     box-shadow: 0 0 0 2px #e2e7ee,
                 0 0 2px #fff,
                 3px 3px 2px #a7aaaf,
@@ -276,7 +268,6 @@ input[type=checkbox]{
     border-radius: 4px;
     outline: none;
     border: none;
-    /* background: #ecf0f3; */
     box-shadow: 0 0 0 2px #e2e7ee,
                 0 0 2px #fff,
                 3px 3px 2px #a7aaaf,
@@ -333,9 +324,44 @@ a{
     background-color: rgb(117, 150, 250);
 }
 
-/* .submit ol{
-    padding-left: 22px;
-} */
+@media screen and (max-width: 600px) {
+    .main-container{
+        height: 480px;
+        width: 500px;
+        position: fixed;
+    }
+    .site-header, .profile-pic, .bio-data, .education, .hobbies, .profile-display{
+        position: absolute;
+        height: 380px;
+        width: 460px;
+        top: 10%;
+    }
+    .profile-pic-div{
+        height: 200px;
+        width: 230px;
+        position: fixed;
+        top: 17%;
+        left: 25%;
+    }
+    #picBtn{
+        display: block;
+        margin-top: 65%;
+        align-self: flex-end;
+    }
+    .one, .three{
+        width: 8em;
+    }
+    .two{
+        width: 15em;
+    }
+    .input1{
+        margin-bottom: 24px;
+        margin-right: 9px;
+        width: 138px;
+        height: 29px;
+    }
+}
+
 
 /*  To be used in the jquery */
 
