@@ -73,7 +73,7 @@ body{
     color: #555;
 }
 .main-container{
-    height: 680px;
+    height: 640px;
     width: 690px;
     position: fixed;
     top: 50%;
@@ -292,7 +292,7 @@ input[type=checkbox]{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 #picBtn{
@@ -324,16 +324,16 @@ a{
     background-color: rgb(117, 150, 250);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 570px) {
     .main-container{
-        height: 480px;
-        width: 500px;
+        height: 470px;
+        width: 480px;
         position: fixed;
     }
     .site-header, .profile-pic, .bio-data, .education, .hobbies, .profile-display{
         position: absolute;
-        height: 380px;
-        width: 460px;
+        height: 370px;
+        width: 410px;
         top: 10%;
     }
     .profile-pic-div{
@@ -349,15 +349,15 @@ a{
         align-self: flex-end;
     }
     .one, .three{
-        width: 8em;
+        width: 7em;
     }
     .two{
         width: 15em;
     }
     .input1{
         margin-bottom: 24px;
-        margin-right: 9px;
-        width: 138px;
+        margin-right: 8px;
+        width: 129px;
         height: 29px;
     }
 }
